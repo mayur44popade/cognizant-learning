@@ -62,3 +62,24 @@ const aList1 = ["Mayur", 27];
 //Second element in array is optional
 const aList2 = ["Popade"];
 //Generics
+//Classes with constructors
+class Emoji {
+    constructor(icon) {
+        this.icon = icon;
+    }
+}
+let sun = new Emoji("Sun");
+console.log(sun.icon);
+//Using private members of class
+class Emoji2 {
+    constructor(_icon) {
+        this._icon = _icon;
+    }
+    //Get method to access private members of class
+    //So that other members will be able to read
+    //the value but cannot change it afterwards
+    get icon() {
+        return this._icon;
+    }
+}
+const moon = new Emoji2("Moon");

@@ -111,3 +111,31 @@ const aList1: AnotherList = ["Mayur", 27];
 const aList2: AnotherList = ["Popade"];
 
 //Generics
+
+
+//Classes with constructors
+class Emoji {
+  icon: string;
+
+  constructor(icon){
+    this.icon = icon;
+  }
+}
+
+let sun = new Emoji("Sun");
+console.log(sun.icon);
+
+//Using private members of class
+class Emoji2 {
+
+  constructor(private _icon){}
+
+  //Get method to access private members of class
+  //So that other members will be able to read
+  //the value but cannot change it afterwards
+  get icon(){
+    return this._icon;
+  }
+}
+
+const moon = new Emoji2("Moon");
